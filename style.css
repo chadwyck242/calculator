@@ -16,7 +16,6 @@ body {
 }
 
 .calculator {
-  border: 1px solid #333;
   background-color: #000;
   position: absolute;
   top: 50%;
@@ -41,7 +40,7 @@ body {
 button {
   height: 90px;
   background-color: #e0e0e0;
-  border: 1px solid #333;
+  border: none;
   font-size: 3rem;
   color: #333;
 }
@@ -81,7 +80,7 @@ button:active {
 .calculator-keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 8px;
+    grid-gap: 5px;
 }
 
 .all-clear {
