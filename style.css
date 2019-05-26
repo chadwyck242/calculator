@@ -65,3 +65,21 @@ button:hover {
 .equal-sign:hover {
   background-color: #ffe0b2;
 }
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+}
+
+.all-clear {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.zero-button {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
