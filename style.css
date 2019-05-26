@@ -39,15 +39,19 @@ body {
 }
 
 button {
-  height: 56px;
+  height: 90px;
   background-color: #e0e0e0;
   border: 1px solid #333;
-  font-size: 2.125rem;
+  font-size: 3rem;
   color: #333;
 }
 
 button:hover {
   background-color: #f5f5f5;
+}
+
+button:active {
+    background-color: #BDBDBD;
 }
 
 .operator {
@@ -58,6 +62,10 @@ button:hover {
   background-color: #ffe0b2;
 }
 
+.operator:active {
+    background-color: #FF9800;
+}
+
 .equal-sign {
   background-color: #ffb74d;
 }
@@ -65,6 +73,10 @@ button:hover {
 .equal-sign:hover {
   background-color: #ffe0b2;
 }
+
+.equal-sign:active {
+    background-color: #FF9800;
+  }
 
 .calculator-keys {
     display: grid;
