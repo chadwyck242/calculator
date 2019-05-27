@@ -51,12 +51,12 @@ button:hover {
 }
 
 button:active {
-    background-color: #BDBDBD;
+  background-color: #bdbdbd;
 }
 
 .operator {
   background-color: #ffb74d;
-  color: #FFF;
+  color: #fff;
 }
 
 .operator:hover {
@@ -64,23 +64,23 @@ button:active {
 }
 
 .operator:active {
-    background-color: #FF9800;
+  background-color: #ff9800;
 }
 
 .calculator-keys {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
 }
 
 .all-clear {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-column-end: 3;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .zero-button {
-    grid-row-start: 5;
-    grid-column-start: 1;
-    grid-column-end: 4;
+  grid-row-start: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
