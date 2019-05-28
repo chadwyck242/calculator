@@ -14,6 +14,19 @@ function inputDigit(digit) {
 	calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
 }
 
+// a function that handles the input of operators in relation to given operands
+function handleOperator(nextOperator) {
+	const { firstOperand, displayValue, operator } = calculator;
+	const inputValue = parseInt(displayValue);
+
+	if (firstOperand === null) {
+		calculator.firstOperand = inputValue;
+	}
+
+	calculator.awaitSecondOperand = true;
+	calculator.operator = nextOperator;
+}
+
 // a function that handles digits to be output in the display screen
 function updateDisplay() {
 	const display = document.querySelector('.calculator-screen');
@@ -32,8 +45,8 @@ keys.addEventListener('click', event => {
 		return;
 	}
 	if (target.classList.contains('operator')) {
-		console.log('operator', target.value);
-		return;
+		handleOperator(target.value);
+		updateDisplay();
 	}
 	if (target.classList.contains('all-clear')) {
 		console.log('clear', target.value);
