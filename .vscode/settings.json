@@ -1,0 +1,13 @@
+{
+    "typescript.format.enable": false,
+    "javascript.format.enable": false,
+    "html.format.enable": false,
+    "editor.formatOnSave": true,
+    "prettier.tslintIntegration": true,
+    "prettier.useTabs": true,
+    "prettier.eslintIntegration": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.stylelintIntegration": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "html-css-class-completion.enableEmmetSupport": true
+}
