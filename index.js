@@ -9,7 +9,7 @@ const calculator = {
 // a function that handles the digits input by the user for display
 // and arithmetic operations
 function inputDigit(digit) {
-	const { displayValue, awaitSecondOperand } = calculator;
+	let { displayValue, awaitSecondOperand } = calculator;
 
 	if (awaitSecondOperand === true) {
 		calculator.displayValue = digit;
@@ -21,9 +21,25 @@ function inputDigit(digit) {
 	}
 }
 
+// function to handle backspace operation
+function deleteKey() {
+	let { displayValue } = calculator;
+	let buffer = displayValue;
+
+	if (buffer.length === 1) {
+		buffer = '0';
+	} else {
+		buffer = displayValue.substring(0, displayValue.length - 1);
+	}
+	calculator.displayValue = buffer;
+	updateDisplay();
+	console.log(calculator);
+	console.log(displayValue);
+}
+
 // a function that handles the input of operators in relation to given operands
 function handleOperator(nextOperator) {
-	const { firstOperand, displayValue, operator } = calculator;
+	let { firstOperand, displayValue, operator } = calculator;
 	const inputValue = parseInt(displayValue);
 
 	if (operator && calculator.waitingForSecondOperand) {
@@ -91,6 +107,11 @@ keys.addEventListener('click', event => {
 	}
 	if (target.classList.contains('all-clear')) {
 		clearState();
+		updateDisplay();
+		return;
+	}
+	if (target.classList.contains('backspace')) {
+		deleteKey();
 		updateDisplay();
 		return;
 	}
