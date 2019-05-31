@@ -4,6 +4,8 @@
 
 HTML, CSS & JavaScript combined project: to make a simple clone of the iOS calculator.
 
+View the GitHub Project Page [here](https://chadwyck242.github.io/calculator/)
+
 **Acknowledgements**:
 
 The following tutorials were very helpful in getting this project complete (along with the great solution videos by Brian Holt):
