@@ -58,6 +58,15 @@ const getCalculation = {
 	'=': (firstOperand, secondOperand) => secondOperand
 };
 
+// clear the calculator screen and reset everything to beginning state
+function clearState() {
+	calculator.displayValue = '0';
+	calculator.firstOperand = null;
+	calculator.awaitSecondOperand = false;
+	calculator.operator = null;
+	console.log(calculator);
+}
+
 // a function that handles digits to be output in the display screen
 function updateDisplay() {
 	const display = document.querySelector('.calculator-screen');
@@ -81,7 +90,8 @@ keys.addEventListener('click', event => {
 		return;
 	}
 	if (target.classList.contains('all-clear')) {
-		console.log('clear', target.value);
+		clearState();
+		updateDisplay();
 		return;
 	}
 
