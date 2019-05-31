@@ -35,7 +35,7 @@ function handleOperator(nextOperator) {
 		calculator.firstOperand = inputValue;
 	} else if (operator) {
 		const currentValue = firstOperand || 0;
-		const result = performCalculation[operator](currentValue, inputValue);
+		const result = getCalculation[operator](currentValue, inputValue);
 
 		calculator.displayValue = String(result);
 		calculator.firstOperand = result;
@@ -44,6 +44,19 @@ function handleOperator(nextOperator) {
 	calculator.awaitSecondOperand = true;
 	calculator.operator = nextOperator;
 }
+
+// object to hold math functionality for the handleOperator function
+const getCalculation = {
+	'/': (firstOperand, secondOperand) => firstOperand / secondOperand,
+
+	'*': (firstOperand, secondOperand) => firstOperand * secondOperand,
+
+	'+': (firstOperand, secondOperand) => firstOperand + secondOperand,
+
+	'-': (firstOperand, secondOperand) => firstOperand - secondOperand,
+
+	'=': (firstOperand, secondOperand) => secondOperand
+};
 
 // a function that handles digits to be output in the display screen
 function updateDisplay() {
